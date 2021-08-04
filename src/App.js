@@ -19,6 +19,33 @@ function App() {
     eventToBeRemoved.push(e);
   };
 
+  function removeAllIndicesRight() {
+    console.log("In remove all indices right");
+    let newList = [];
+    for (let i = 0; i < rightList.length; i++) {
+      if (idxToBeRemovedLeft.includes(i)) {
+        continue;
+      } else {
+        newList.push(rightList[i]);
+      }
+    }
+    eventToBeRemoved.forEach((event) => {
+      leftList.push(event.target.value);
+    });
+
+    for (let i = 0; i < eventToBeRemoved.length; i++) {
+      let event = eventToBeRemoved[i];
+      event.target.checked = false;
+    }
+    console.log("Newlist: ", newList);
+    setRightListState([...newList]);
+    setLeftListState([...leftList]);
+    rightList = newList;
+    idxToBeRemovedLeft = [];
+    eventToBeRemoved = [];
+  }
+
+  // TODO: Add similiar isLeft condition here so that we would be able to solve it here Only just reverse everything done here
   function removeAllIndices() {
     let newList = [];
     for (let i = 0; i < leftList.length; i++) {
@@ -53,8 +80,13 @@ function App() {
     />
   ));
 
-  const renderRightList = rightList.map((value, idx) => (
-    <CheckBox id={idx} value={value} key={idx} />
+  const renderRightList = rightListState.map((value, idx) => (
+    <CheckBox
+      id={idx}
+      value={value}
+      key={idx}
+      getIndexOfCheckedBoxes={getIndexOfCheckedBoxes}
+    />
   ));
   return (
     <React.Fragment>
@@ -73,10 +105,10 @@ function App() {
         </div>
       </div>
       <div className="btn-grp">
-        <button id="btn-left" className="btn" onClick={removeAllIndices}>
+        <button className="btn" id="btn-right" onClick={removeAllIndicesRight}>
           &lt;
         </button>
-        <button className="btn" id="btn-right">
+        <button id="btn-left" className="btn" onClick={removeAllIndices}>
           &gt;
         </button>
       </div>
