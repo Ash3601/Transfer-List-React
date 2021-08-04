@@ -1,0 +1,74 @@
+:root {
+  --main-bg-color: coral;
+  --font-size: 2rem;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 80vh;
+  border: 1px solid black;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.box1 {
+  width: 40%;
+
+  border: 1px solid black;
+  height: 100%;
+}
+
+.box2 {
+  width: 40%;
+  height: 100%;
+  border: 1px solid black;
+  /* min-height: 80%; */
+}
+
+.btn-grp {
+  /* display: inline-block; */
+  /* margin-right: auto; */
+  text-align: center;
+  margin-left: auto;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  font-size: var(--font-size);
+}
+
+#checkboxes-left {
+  text-align: center;
+  margin-top: 15%;
+  font-size: var(--font-size);
+}
+
+#checkboxes-right {
+  text-align: center;
+  margin-top: 15%;
+  font-size: var(--font-size);
+}
+
+label {
+  margin-left: 1rem;
+}
+
+input[type="checkbox"] {
+  width: var(--font-size); /*Desired width*/
+  height: var(--font-size); /*Desired height*/
+  cursor: pointer;
+}
+
+.check-all {
+  margin-left: auto;
+  display: block;
+  margin-right: auto;
+}
