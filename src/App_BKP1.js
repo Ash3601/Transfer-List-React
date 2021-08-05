@@ -5,7 +5,6 @@ import React, { useState } from "react";
 
 let rightList = [100, 200, 300, 400, 500];
 let idxToBeRemovedLeft = [];
-let idxToBeRemovedRight = [];
 let eventToBeRemoved = [];
 let leftList = [1, 2, 3, 4, 5];
 function App() {
@@ -37,38 +36,16 @@ function App() {
         newList.push(currentEvent);
       }
     }
+    console.log("Old list", eventToBeRemoved, "new list", newList);
     return newList;
   }
-  const getIndexOfCheckedBoxes = (e, left) => {
-    // let isLeft = true;
-    const isLeft =
-      e.target.parentElement.parentElement.id === "checkboxes-left"
-        ? true
-        : false;
-    if (isLeft) {
-      console.log(
-        "Event for leftDisable",
-        e.target.parentElement.parentElement.id,
-      );
-      if (e.target.checked) {
-        setLeftDisable(false);
-      }
-    } else {
-      if (e.target.checked) {
-        setRightDisable(false);
-      }
-    }
+  const getIndexOfCheckedBoxes = (e) => {
     const id = e.target.id.slice(4);
     if (idxToBeRemovedLeft.includes(parseInt(id))) {
       if (e.target.checked) return;
       if (e.target.checked === false) {
         idxToBeRemovedLeft = removeUnCheckedNodeIdx(id, idxToBeRemovedLeft);
         eventToBeRemoved = removeUncheckedNodeEvent(id, eventToBeRemoved);
-        if (eventToBeRemoved.length === 0) {
-          setLeftDisable(true);
-          setRightDisable(true);
-        }
-
         return;
       }
     }
@@ -100,8 +77,6 @@ function App() {
     rightList = newList;
     idxToBeRemovedLeft = [];
     eventToBeRemoved = [];
-    setRightDisable(true);
-    setLeftDisable(true);
   }
 
   // TODO: Add similiar isLeft condition here so that we would be able to solve it here Only just reverse everything done here
@@ -127,23 +102,6 @@ function App() {
     leftList = newList;
     idxToBeRemovedLeft = [];
     eventToBeRemoved = [];
-    setRightDisable(true);
-    setLeftDisable(true);
-  }
-
-  function checkAllLeft(leftList) {
-    const renderLeftList = leftListState.map((value, idx) => (
-      <CheckBox
-        left={"true"}
-        idx={idx}
-        id={idx}
-        value={value}
-        key={idx}
-        checked="true"
-        getIndexOfCheckedBoxes={getIndexOfCheckedBoxes}
-      />
-    ));
-    // setLeftListState(rende)
   }
 
   const renderLeftList = leftListState.map((value, idx) => (
@@ -169,15 +127,15 @@ function App() {
     <React.Fragment>
       <div className="container">
         <div className="box1">
-          {/* <button className="check-all" id="check-all-left">
+          <button className="check-all" id="check-all-left">
             Check All
-          </button> */}
+          </button>
           <div id="checkboxes-left">{renderLeftList}</div>
         </div>
         <div className="box2">
-          {/* <button className="check-all" id="check-all-right">
+          <button className="check-all" id="check-all-right">
             Check All
-          </button> */}
+          </button>
           <div id="checkboxes-right">{renderRightList}</div>
         </div>
       </div>
@@ -186,7 +144,7 @@ function App() {
           className="btn"
           id="btn-right"
           onClick={removeAllIndicesRight}
-          disabled={rightDisable}
+          // disabled={leftDisable}
         >
           &lt;
         </button>
@@ -194,7 +152,7 @@ function App() {
           id="btn-left"
           className="btn"
           onClick={removeAllIndices}
-          disabled={leftDisable}
+          // disabled={rightDisable}
         >
           &gt;
         </button>
