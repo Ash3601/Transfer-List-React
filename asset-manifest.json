@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Ash3601/Transfer-List-React/transfer-list/static/css/main.fe80bd84.chunk.css",
-    "main.js": "/Ash3601/Transfer-List-React/transfer-list/static/js/main.d8a86661.chunk.js",
-    "main.js.map": "/Ash3601/Transfer-List-React/transfer-list/static/js/main.d8a86661.chunk.js.map",
-    "runtime-main.js": "/Ash3601/Transfer-List-React/transfer-list/static/js/runtime-main.b6501b50.js",
-    "runtime-main.js.map": "/Ash3601/Transfer-List-React/transfer-list/static/js/runtime-main.b6501b50.js.map",
-    "static/js/2.0de2eaf3.chunk.js": "/Ash3601/Transfer-List-React/transfer-list/static/js/2.0de2eaf3.chunk.js",
-    "static/js/2.0de2eaf3.chunk.js.map": "/Ash3601/Transfer-List-React/transfer-list/static/js/2.0de2eaf3.chunk.js.map",
-    "static/js/3.2152b3bb.chunk.js": "/Ash3601/Transfer-List-React/transfer-list/static/js/3.2152b3bb.chunk.js",
-    "static/js/3.2152b3bb.chunk.js.map": "/Ash3601/Transfer-List-React/transfer-list/static/js/3.2152b3bb.chunk.js.map",
-    "index.html": "/Ash3601/Transfer-List-React/transfer-list/index.html",
-    "static/css/main.fe80bd84.chunk.css.map": "/Ash3601/Transfer-List-React/transfer-list/static/css/main.fe80bd84.chunk.css.map",
-    "static/js/2.0de2eaf3.chunk.js.LICENSE.txt": "/Ash3601/Transfer-List-React/transfer-list/static/js/2.0de2eaf3.chunk.js.LICENSE.txt"
+    "main.css": "/Ash3601/transfer-list-react-deploy/static/css/main.fe80bd84.chunk.css",
+    "main.js": "/Ash3601/transfer-list-react-deploy/static/js/main.d8a86661.chunk.js",
+    "main.js.map": "/Ash3601/transfer-list-react-deploy/static/js/main.d8a86661.chunk.js.map",
+    "runtime-main.js": "/Ash3601/transfer-list-react-deploy/static/js/runtime-main.bc558867.js",
+    "runtime-main.js.map": "/Ash3601/transfer-list-react-deploy/static/js/runtime-main.bc558867.js.map",
+    "static/js/2.0de2eaf3.chunk.js": "/Ash3601/transfer-list-react-deploy/static/js/2.0de2eaf3.chunk.js",
+    "static/js/2.0de2eaf3.chunk.js.map": "/Ash3601/transfer-list-react-deploy/static/js/2.0de2eaf3.chunk.js.map",
+    "static/js/3.2152b3bb.chunk.js": "/Ash3601/transfer-list-react-deploy/static/js/3.2152b3bb.chunk.js",
+    "static/js/3.2152b3bb.chunk.js.map": "/Ash3601/transfer-list-react-deploy/static/js/3.2152b3bb.chunk.js.map",
+    "index.html": "/Ash3601/transfer-list-react-deploy/index.html",
+    "static/css/main.fe80bd84.chunk.css.map": "/Ash3601/transfer-list-react-deploy/static/css/main.fe80bd84.chunk.css.map",
+    "static/js/2.0de2eaf3.chunk.js.LICENSE.txt": "/Ash3601/transfer-list-react-deploy/static/js/2.0de2eaf3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b6501b50.js",
+    "static/js/runtime-main.bc558867.js",
     "static/js/2.0de2eaf3.chunk.js",
     "static/css/main.fe80bd84.chunk.css",
     "static/js/main.d8a86661.chunk.js"
